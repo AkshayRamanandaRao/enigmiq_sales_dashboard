@@ -9,10 +9,11 @@ Open this repository from any laptop to see the current pipeline. The figures re
 
 | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 3 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 4 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ### Next actions
 
+- [\[research\] Dran Engineers](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/4) — Review this draft, verify a suitable business contact, and request approval before any outreach.
 - [\[research\] SPM India](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/3) — 2026-11-09 — verify current company contact route and CAD environment before preparing outreach.
 - [\[research\] Nimalann Design Services](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/2) — 2026-11-09 — check whether repeat revisions or drawings are a plausible pilot and prepare an introduction for daily…
 - [\[research\] Techmatix](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/1) — 2026-11-09 — verify the right business contact and prepare a specific introduction for daily approval.
@@ -21,7 +22,7 @@ Open this repository from any laptop to see the current pipeline. The figures re
 
 | Date | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2026-11-08 | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2026-11-08 | 4 | 0 | 0 | 0 | 0 | 0 | 0 |
 <!-- DASHBOARD_END -->
 
 ## How to use
