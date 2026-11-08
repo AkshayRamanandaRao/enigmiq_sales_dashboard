@@ -1,0 +1,31 @@
+# EnigmiQ sales dashboard
+
+Open this repository from any laptop to see the current pipeline. The figures below refresh when a prospect issue changes and once daily. [EnigmiQ website and demos](https://enigmiq.com/#demos) · [Company LinkedIn Page](https://www.linkedin.com/company/enigmiq-technologies/home/) · [Business enquiries](mailto:enquiry@enigmiq.com)
+
+**Privacy:** This repository is public. Put only public company research here. Do not add customer messages, personal contact details, proposals, credentials, or commercial terms until the repository is private. The mailbox is not connected yet.
+
+<!-- DASHBOARD_START -->
+## Pipeline · awaiting first prospect issues
+
+| Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+### Next actions
+
+No prospect issues yet.
+
+### Daily history (Europe/Zagreb)
+
+| Date | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+<!-- DASHBOARD_END -->
+
+## How to use
+
+Create an issue with the **Prospect** template for each researched company. A title starts with a stage, such as `[research] Example Engineering`. Change that stage to `contacted`, `replied`, `meeting`, `proposal`, `won`, or `lost` as the relationship progresses. Keep a source URL, the relevant EnigmiQ offer, the best demo, and a dated next action in the issue. The dashboard updates after issue edits; [run it on demand](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/actions/workflows/dashboard.yml) if needed.
+
+The first targets to investigate are [Techmatix](https://www.techmatix.in/services) (Inventor assemblies and drawing revisions), [Nimalann Design Services](https://ndseng.com/) (SolidWorks models and production drawings), and [SPM India](https://www.linkedin.com/company/spm-india-ltd/) (custom machines and test equipment). These are research candidates, not confirmed buyers. EnigmiQ CAD and custom copilot integration are equal offers; choose the demo after checking each company's workflow.
+
+Outbound email and LinkedIn messages require the business account connection and the agreed daily approval process. The dashboard does not send messages on its own.
+
