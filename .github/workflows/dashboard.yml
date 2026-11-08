@@ -1,7 +1,5 @@
 name: Update sales dashboard
 on:
-  schedule:
-    - cron: '0 9 * * *'
   issues:
     types: [opened, edited, closed, reopened, deleted]
   push:
