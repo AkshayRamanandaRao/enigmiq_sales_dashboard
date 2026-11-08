@@ -5,7 +5,7 @@ Open this repository from any laptop to see the current pipeline. The figures be
 **Privacy:** This repository is public. Put only public company research here. Do not add customer messages, personal contact details, proposals, credentials, or commercial terms until the repository is private. The mailbox is not connected yet.
 
 <!-- DASHBOARD_START -->
-## Pipeline · awaiting first prospect issues
+## Pipeline · updated 2026-11-08 (Europe/Zagreb)
 
 | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -13,12 +13,13 @@ Open this repository from any laptop to see the current pipeline. The figures be
 
 ### Next actions
 
-No prospect issues yet.
+No next actions recorded.
 
 ### Daily history (Europe/Zagreb)
 
 | Date | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2026-11-08 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 <!-- DASHBOARD_END -->
 
 ## How to use
