@@ -16,7 +16,7 @@
 - [\[research\] Triad Software](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/9) — Review the public contact route and final draft; approve the recipient and copy before any outreach.
 - [\[research\] Heliccs Bharat Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/8) — Review the public contact route and final draft; approve the recipient and copy before any outreach.
 - [\[research\] The Cad Company](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/7) — Review the public contact route and final draft; approve the recipient and copy before any outreach.
-- [\[research\] MechDynamics Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/6) — Review this draft, verify a suitable business contact, and request approval before any outreach.
+- [\[research\] MechDynamics Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/6) — Review the public contact route and final draft; approve the recipient and copy before any outreach.
 - [\[research\] MOI Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/5) — Review this draft, verify a suitable business contact, and request approval before any outreach.
 - [\[research\] Dran Engineers](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/4) — Review this draft, verify a suitable business contact, and request approval before any outreach.
 - [\[research\] SPM India](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/3) — Review this draft, verify a suitable business contact, and request approval before any outreach.
