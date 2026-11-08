@@ -1,6 +1,6 @@
 # EnigmiQ sales dashboard
 
-Open this repository from any laptop to see the current pipeline. The figures below refresh when a prospect issue changes and once daily. [EnigmiQ website and demos](https://enigmiq.com/#demos) · [Company LinkedIn Page](https://www.linkedin.com/company/enigmiq-technologies/home/) · [Business enquiries](mailto:enquiry@enigmiq.com)
+Open this repository from any laptop to see the current pipeline. The figures refresh when a prospect issue changes or when you run the workflow manually. Recurring prospect research is paused until you ask to start it. [EnigmiQ website and demos](https://enigmiq.com/#demos) · [Company LinkedIn Page](https://www.linkedin.com/company/enigmiq-technologies/home/) · [Business enquiries](mailto:enquiry@enigmiq.com)
 
 **Privacy:** This repository is public. Put only public company research here. Do not add customer messages, personal contact details, proposals, credentials, or commercial terms until the repository is private. The mailbox is not connected yet.
 
