@@ -5,6 +5,7 @@ from datetime import datetime
 import json
 import os
 import re
+import textwrap
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
@@ -42,7 +43,8 @@ def prospect_issues():
 
 
 def safe_cell(value):
-    return re.sub(r"\s+", " ", value).replace("|", "\\|").replace("[", "\\[").replace("]", "\\]")[:120]
+    value = re.sub(r"\s+", " ", value).replace("|", "\\|").replace("[", "\\[").replace("]", "\\]")
+    return textwrap.shorten(value, width=120, placeholder="…")
 
 
 def render(readme, issues, today):
