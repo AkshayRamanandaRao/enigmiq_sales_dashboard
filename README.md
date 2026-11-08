@@ -9,17 +9,17 @@ Open this repository from any laptop to see the current pipeline. The figures be
 
 | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ### Next actions
 
-No next actions recorded.
+- [\[research\] Techmatix](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/1) — 2026-11-09 — verify the right business contact and prepare a specific introduction for daily approval.
 
 ### Daily history (Europe/Zagreb)
 
 | Date | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2026-11-08 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2026-11-08 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 <!-- DASHBOARD_END -->
 
 ## How to use
