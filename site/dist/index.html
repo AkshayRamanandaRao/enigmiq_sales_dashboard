@@ -124,6 +124,7 @@
         if (p.next) card.append(node('p', 'Next: ' + p.next, 'action'));
         const meta = node('div', null, 'meta');
         if (p.source && /^https:\/\//.test(p.source)) { const a = node('a', 'Company source ↗'); a.href = p.source; a.target = '_blank'; a.rel = 'noopener noreferrer'; meta.append(a); }
+        if (p.route) meta.append(node('span', 'Contact: ' + p.route));
         meta.append(node('span', p.draft ? 'Email draft ready for review' : 'Email draft pending'));
         meta.append(node('span', 'Updated ' + new Date(p.updated).toLocaleDateString(undefined, {year:'numeric',month:'short',day:'numeric'})));
         card.append(meta); cards.append(card);
@@ -144,7 +145,7 @@
           const body = i.body || '';
           return { stage: match[1].toLowerCase(), name: match[2], url: i.html_url, updated: i.updated_at,
             source: field(body, 'Public source'), fit: field(body, 'Why this company fits'), offer: field(body, 'Offer \\(EnigmiQ CAD or custom integration\\)'),
-            next: field(body, 'Next action'), draft: /(?:^|\n)## Email draft\b/i.test(body) };
+            route: field(body, 'Public contact route'), next: field(body, 'Next action'), draft: /(?:^|\n)## Email draft\b/i.test(body) };
         }).filter(Boolean).sort((a,b) => b.updated.localeCompare(a.updated));
         const count = s => prospects.filter(p => p.stage === s).length;
         document.querySelector('#researched').textContent = prospects.length;
@@ -167,3 +168,4 @@
   </script>
 </body>
 </html>
+
