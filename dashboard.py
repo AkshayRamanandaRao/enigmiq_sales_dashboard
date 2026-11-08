@@ -6,6 +6,7 @@ import json
 import os
 import re
 import textwrap
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
@@ -80,16 +81,24 @@ def render(readme, issues, today):
 
 
 def main():
-    remote = api("/contents/README.md")
-    current = base64.b64decode(remote["content"]).decode("utf-8")
     today = datetime.now(ZoneInfo("Europe/Zagreb")).date().isoformat()
-    updated = render(current, list(prospect_issues()), today)
-    if updated != current:
-        api("/contents/README.md", {
-            "message": "Update sales dashboard for " + today,
-            "content": base64.b64encode(updated.encode()).decode(),
-            "sha": remote["sha"],
-        })
+    issues = list(prospect_issues())
+    for attempt in range(3):
+        remote = api("/contents/README.md")
+        current = base64.b64decode(remote["content"]).decode("utf-8")
+        updated = render(current, issues, today)
+        if updated == current:
+            return
+        try:
+            api("/contents/README.md", {
+                "message": "Update sales dashboard for " + today,
+                "content": base64.b64encode(updated.encode()).decode(),
+                "sha": remote["sha"],
+            })
+            return
+        except HTTPError as error:
+            if error.code != 409 or attempt == 2:
+                raise
 
 
 if __name__ == "__main__":
