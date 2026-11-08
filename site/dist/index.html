@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1221">
+  <title>EnigmiQ Sales Console</title>
+  <meta name="description" content="EnigmiQ prospect research, outreach drafts, and sales progress in one place.">
+  <style>
+    :root { font: 15px/1.5 Inter, ui-sans-serif, system-ui, Segoe UI, sans-serif; color: #e8f0fb; background: #080f1b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at 82% -8%, #173957 0, transparent 34%), #080f1b; }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    .shell { max-width: 1320px; margin: 0 auto; padding: 0 28px 72px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; border-bottom: 1px solid #213147; }
+    .brand { display: flex; gap: 13px; align-items: center; text-decoration: none; letter-spacing: .08em; font-weight: 800; font-size: 17px; }
+    .mark { width: 38px; height: 38px; border: 1px solid #71d8f7; display: grid; place-items: center; color: #8ae7fb; font-size: 23px; transform: rotate(45deg); border-radius: 8px; }
+    .mark span { transform: rotate(-45deg); }
+    nav { display: flex; align-items: center; gap: 24px; color: #a5b8cd; font-size: 13px; }
+    nav a:hover, .textlink:hover { color: #8ae7fb; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(290px, .9fr); gap: 24px; padding: 42px 0 28px; }
+    .eyebrow { color: #7ddff2; font-size: 11px; text-transform: uppercase; letter-spacing: .18em; font-weight: 800; }
+    h1 { font-size: clamp(32px, 4vw, 56px); letter-spacing: -.045em; line-height: 1.08; margin: 13px 0 15px; }
+    .hero p { max-width: 710px; color: #a9bdd2; font-size: 16px; margin: 0; }
+    .statusbox, .panel, .metric, .card { border: 1px solid #23344a; background: rgba(18, 31, 48, .86); border-radius: 16px; }
+    .statusbox { padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .statusline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 11px; border-radius: 99px; background: #333027; color: #f1d397; font-weight: 700; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #f4c66c; }
+    .statusbox strong { font-size: 18px; margin-top: 23px; }
+    .statusbox p { font-size: 13px; margin-top: 6px; }
+    .small { color: #8da5be; font-size: 12px; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+    .metric { padding: 20px 22px; min-height: 123px; }
+    .metric .label { color: #9fb3ca; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+    .metric .value { font-size: 39px; line-height: 1.1; font-weight: 800; margin-top: 11px; font-variant-numeric: tabular-nums; }
+    .metric:first-child .value { color: #8de8f6; }
+    .grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(290px, .8fr); gap: 24px; align-items: start; }
+    .panel { padding: 23px; margin-bottom: 24px; }
+    .panel h2 { font-size: 20px; letter-spacing: -.02em; margin: 0; }
+    .panelhead { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 17px; }
+    .sub { color: #9fb3ca; font-size: 13px; margin: 5px 0 0; }
+    .stagebar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+    .stage { border: 1px solid #2b4059; border-radius: 10px; padding: 12px 9px; background: #0c1a2b; text-align: center; }
+    .stage b { display: block; font-size: 22px; font-variant-numeric: tabular-nums; }
+    .stage span { display: block; font-size: 10px; color: #9fb3ca; text-transform: uppercase; letter-spacing: .05em; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .controls input, .controls select { background: #0b1929; border: 1px solid #30445d; border-radius: 9px; color: #e8f0fb; padding: 10px 12px; min-height: 42px; }
+    .controls input { flex: 1; min-width: 170px; }
+    .controls select { min-width: 138px; }
+    .cards { display: grid; gap: 11px; }
+    .card { background: #0c1a2b; padding: 17px 18px; }
+    .cardtop { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+    .card h3 { margin: 0; font-size: 16px; }
+    .card h3 a { text-decoration: none; }
+    .card h3 a:hover { color: #8ae7fb; }
+    .tag { flex: none; border: 1px solid #35616d; color: #8ce5f1; background: #10303b; padding: 3px 8px; border-radius: 6px; font-size: 11px; text-transform: uppercase; font-weight: 800; }
+    .card p { color: #b4c4d5; font-size: 13px; margin: 10px 0 0; }
+    .card .action { color: #dce8f3; }
+    .meta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 13px; color: #8ea5bd; font-size: 12px; }
+    .meta a { color: #80dcef; }
+    .notes { display: grid; gap: 11px; }
+    .note { padding-left: 13px; border-left: 2px solid #3eacc4; color: #b8c8d9; font-size: 13px; }
+    .note b { display: block; color: #e6f0f8; margin-bottom: 3px; }
+    .asset { display: block; padding: 10px 0; border-bottom: 1px solid #21344b; text-decoration: none; font-size: 13px; }
+    .asset:hover { color: #8ae7fb; }
+    .asset small { display: block; color: #8ea5bd; font-size: 11px; margin-top: 3px; }
+    .asset:last-child { border: none; }
+    .error { color: #ffd0a1; background: #352821; padding: 13px; border-radius: 10px; }
+    .empty { color: #9fb3ca; padding: 20px 4px; }
+    footer { border-top: 1px solid #213147; padding-top: 24px; margin-top: 16px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; color: #8ea5bd; font-size: 12px; }
+    @media (max-width: 950px) { .hero, .grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) { .shell { padding: 0 16px 48px; } nav { gap: 10px; } nav a:first-child { display: none; } .hero { padding-top: 28px; } .metrics { gap: 9px; } .metric { padding: 16px; min-height: 100px; } .metric .value { font-size: 31px; } .stagebar { grid-template-columns: repeat(4, 1fr); } .panel { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="https://enigmiq.com/"><span class="mark"><span>E</span></span><span>ENIGMIQ <span style="font-weight:400;color:#91a8be">/ SALES</span></span></a>
+      <nav><a href="https://enigmiq.com/#demos">Product films</a><a href="https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues">Prospect records</a><a href="https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard">Repository</a></nav>
+    </header>
+    <section class="hero">
+      <div><div class="eyebrow">Sales workspace / India first</div><h1>Prospect command center</h1><p>Qualified company research, tailored outreach drafts, and a clear view of what happens next. Every prospect record links to its sources and prepared message.</p></div>
+      <div class="statusbox"><div class="statusline"><span class="eyebrow">Operation status</span><span class="pill"><span class="dot"></span> Paused</span></div><strong>Research runs when requested</strong><p>No recurring research or outbound campaign is active. Emails and LinkedIn messages require your approval before sending.</p><span class="small" id="refresh">Loading current records…</span></div>
+    </section>
+    <section class="metrics" aria-label="Pipeline summary">
+      <div class="metric"><div class="label">Companies researched</div><div class="value" id="researched">—</div></div>
+      <div class="metric"><div class="label">Drafts prepared</div><div class="value" id="drafted">—</div></div>
+      <div class="metric"><div class="label">Contacted</div><div class="value" id="contacted">—</div></div>
+      <div class="metric"><div class="label">Replies + meetings</div><div class="value" id="conversations">—</div></div>
+    </section>
+    <div class="grid">
+      <main>
+        <section class="panel"><div class="panelhead"><div><h2>Pipeline</h2><p class="sub">Issue titles set each company’s current stage.</p></div><a class="small textlink" href="https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues">Open board ↗</a></div><div class="stagebar" id="stages"></div></section>
+        <section class="panel"><div class="panelhead"><div><h2>Companies to approach</h2><p class="sub" id="resultcount">Loading public company research…</p></div></div><div class="controls"><input id="query" type="search" placeholder="Search companies or offer" aria-label="Search prospects"><select id="filter" aria-label="Filter stage"><option value="all">All stages</option><option value="research">Research</option><option value="contacted">Contacted</option><option value="replied">Replied</option><option value="meeting">Meeting</option><option value="proposal">Proposal</option><option value="won">Won</option><option value="lost">Lost</option></select></div><div class="cards" id="cards" aria-live="polite"></div></section>
+      </main>
+      <aside>
+        <section class="panel"><h2>Who we target</h2><p class="sub">Start with Indian teams whose work has a visible CAD need.</p><div class="notes"><div class="note"><b>Machine builders and automation firms</b>Repeated parts, fixture variants, drawings, and engineering changes.</div><div class="note"><b>Mechanical design services</b>Teams delivering native models and drawings for customers.</div><div class="note"><b>Two equal offers</b>EnigmiQ CAD for a standalone workflow, or a scoped copilot integrated into their existing engineering software after discovery.</div></div></section>
+        <section class="panel"><h2>Demo library</h2><p class="sub">All five current films are on the EnigmiQ demos page. Select the most relevant one first in each email.</p><a class="asset" href="https://enigmiq.com/#demos">01 · Idea to editable V8 assembly<small>CAD · 1:22</small></a><a class="asset" href="https://enigmiq.com/#demos">02 · Reference image to drawing<small>CAD · 2:21</small></a><a class="asset" href="https://enigmiq.com/#demos">03 · STEP to editable features<small>CAD · 1:43</small></a><a class="asset" href="https://enigmiq.com/#demos">04 · Parameter graph and revisions<small>CAD · 1:18</small></a><a class="asset" href="https://enigmiq.com/#demos">05 · Floorcraft walkthrough<small>Architecture · 1:25</small></a></section>
+        <section class="panel"><h2>Approval gate</h2><p class="sub">Prospect issues can contain draft emails and a suggested asset. A draft is preparation only.</p><p class="small">No message is sent from this dashboard. Your approval and a connected mailbox are required for outreach.</p></section>
+      </aside>
+    </div>
+    <footer><span>EnigmiQ Technologies · Source: public prospect issues in the repository</span><span>For internal tracking. Do not place private customer data in the public GitHub repository.</span></footer>
+  </div>
+  <script>
+    const repo = 'AkshayRamanandaRao/enigmiq_sales_dashboard';
+    const stages = ['research', 'contacted', 'replied', 'meeting', 'proposal', 'won', 'lost'];
+    let prospects = [];
+    const field = (body, name) => (body.match(new RegExp('^' + name + ':\\s*(.+)$', 'im')) || [,''])[1].trim();
+    const node = (tag, text, cls) => { const el = document.createElement(tag); if (text != null) el.textContent = text; if (cls) el.className = cls; return el; };
+    function show() {
+      const q = document.querySelector('#query').value.toLowerCase().trim();
+      const filter = document.querySelector('#filter').value;
+      const visible = prospects.filter(p => (filter === 'all' || p.stage === filter) && (p.name + ' ' + p.offer).toLowerCase().includes(q));
+      const cards = document.querySelector('#cards'); cards.replaceChildren();
+      document.querySelector('#resultcount').textContent = `${visible.length} of ${prospects.length} company records`;
+      if (!visible.length) cards.append(node('div', prospects.length ? 'No companies match this filter.' : 'No prospect records yet.', 'empty'));
+      for (const p of visible) {
+        const card = node('article', null, 'card'); const top = node('div', null, 'cardtop');
+        const h = node('h3'); const title = node('a', p.name); title.href = p.url; h.append(title); top.append(h, node('span', p.stage, 'tag')); card.append(top);
+        if (p.fit) card.append(node('p', p.fit));
+        if (p.offer) card.append(node('p', 'Offer: ' + p.offer));
+        if (p.next) card.append(node('p', 'Next: ' + p.next, 'action'));
+        const meta = node('div', null, 'meta');
+        if (p.source && /^https:\/\//.test(p.source)) { const a = node('a', 'Company source ↗'); a.href = p.source; a.target = '_blank'; a.rel = 'noopener noreferrer'; meta.append(a); }
+        meta.append(node('span', p.draft ? 'Email draft ready for review' : 'Email draft pending'));
+        meta.append(node('span', 'Updated ' + new Date(p.updated).toLocaleDateString(undefined, {year:'numeric',month:'short',day:'numeric'})));
+        card.append(meta); cards.append(card);
+      }
+    }
+    async function load() {
+      try {
+        const issues = [];
+        for (let page = 1; page <= 5; page++) {
+          const response = await fetch(`https://api.github.com/repos/${repo}/issues?state=all&per_page=100&page=${page}`, { headers: { Accept: 'application/vnd.github+json' } });
+          if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+          const batch = await response.json(); issues.push(...batch.filter(x => !x.pull_request));
+          if (batch.length < 100) break;
+        }
+        prospects = issues.map(i => {
+          const match = i.title.match(/^\[([a-z]+)\]\s+(.+)$/i);
+          if (!match || !stages.includes(match[1].toLowerCase())) return null;
+          const body = i.body || '';
+          return { stage: match[1].toLowerCase(), name: match[2], url: i.html_url, updated: i.updated_at,
+            source: field(body, 'Public source'), fit: field(body, 'Why this company fits'), offer: field(body, 'Offer \\(EnigmiQ CAD or custom integration\\)'),
+            next: field(body, 'Next action'), draft: /(?:^|\n)## Email draft\b/i.test(body) };
+        }).filter(Boolean).sort((a,b) => b.updated.localeCompare(a.updated));
+        const count = s => prospects.filter(p => p.stage === s).length;
+        document.querySelector('#researched').textContent = prospects.length;
+        document.querySelector('#drafted').textContent = prospects.filter(p => p.draft).length;
+        document.querySelector('#contacted').textContent = prospects.filter(p => !['research'].includes(p.stage)).length;
+        document.querySelector('#conversations').textContent = count('replied') + count('meeting');
+        const board = document.querySelector('#stages'); board.replaceChildren();
+        for (const s of stages) { const box = node('div', null, 'stage'); box.append(node('b', count(s)), node('span', s)); board.append(box); }
+        document.querySelector('#refresh').textContent = `Live GitHub data · checked ${new Date().toLocaleString()}`;
+        show();
+      } catch (error) {
+        document.querySelector('#refresh').textContent = 'Could not load live records';
+        document.querySelector('#cards').replaceChildren(node('div', `GitHub records could not be loaded (${error.message}). Open the repository to view the current board.`, 'error'));
+        document.querySelector('#resultcount').textContent = 'Live data unavailable';
+      }
+    }
+    document.querySelector('#query').addEventListener('input', show);
+    document.querySelector('#filter').addEventListener('change', show);
+    load();
+  </script>
+</body>
+</html>
