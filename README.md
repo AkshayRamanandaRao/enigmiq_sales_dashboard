@@ -9,10 +9,12 @@
 
 | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 7 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 9 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ### Next actions
 
+- [\[research\] Triad Software](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/9) — Review this draft, verify a suitable business contact, and request approval before any outreach.
+- [\[research\] Heliccs Bharat Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/8) — Review this draft, verify a suitable business contact, and request approval before any outreach.
 - [\[research\] The Cad Company](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/7) — Review this draft, verify a suitable business contact, and request approval before any outreach.
 - [\[research\] MechDynamics Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/6) — Review this draft, verify a suitable business contact, and request approval before any outreach.
 - [\[research\] MOI Engineering](https://github.com/AkshayRamanandaRao/enigmiq_sales_dashboard/issues/5) — Review this draft, verify a suitable business contact, and request approval before any outreach.
@@ -25,7 +27,7 @@
 
 | Date | Research | Contacted | Replied | Meeting | Proposal | Won | Lost |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2026-11-08 | 7 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2026-11-08 | 9 | 0 | 0 | 0 | 0 | 0 | 0 |
 <!-- DASHBOARD_END -->
 
 ## How to use
